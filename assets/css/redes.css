@@ -1,0 +1,228 @@
+.calendario{
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 70%;
+    border-radius:2px;
+}
+
+#menucel {
+    display: none;
+}
+
+#iconec {
+    display: none;
+}
+
+#menuredes2 a:hover {
+    font-weight: bold;
+    color: #fff !important;
+    background-color: #aaa;
+}
+
+#menuredes2 {
+    display: block;
+    position: relative;
+    margin-right: 100px !important;
+}
+
+#menuredes2 a {
+    font-size: 12px;
+    color: #000;
+    border-radius: 3px;
+}
+
+#mensagemOK {
+    line-height: 200px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 900;
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: 38px;
+    width: 400px;
+    height: 200px;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.texto1 p, li.fa-home {
+    text-align: justify;
+}
+
+figure.mapa, ul.contact {
+    border: 1px solid #ccc;
+    width: 32%;
+    padding: 10px;
+    margin: 0 auto;
+}
+figure.mapa img {
+    width: 99%;
+}
+figure.mapa a {
+    text-decoration: none;
+}
+
+#footer, #footer h2.rodape, #footer b, .desenvolvimento a {
+    color: #000 !important;
+}
+
+.desenvolvimento {
+    display: block;
+    position: relative;
+    width: 250px;
+    font-size: 15px !important;
+    margin: 0 auto;    
+}
+
+.desenvolvimento a {
+    font-weight: bold;
+}
+
+#formulario {
+    display: block;
+    position: relative;
+    margin: 0 auto;    
+    width: 32%;
+    height: 740px;   
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#formulario h2 {
+    display: block;
+    position: relative;    
+    width: 140px !important;
+    margin: 0px auto;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #000 !important;
+}
+
+input.nome, input.mail, textarea.msg {
+    background-color: #fff;
+    color: #000;
+    display: block;
+    position: relative;
+    font-size: 20px;
+    margin: 0px auto;
+    width: 90%;
+}
+
+input.nome:hover, input.mail:hover, textarea.msg:hover {
+    background-color: #eee;
+}
+
+#botao{
+    text-align: center;
+    display: block;
+    position: relative;
+    width: 90%;
+    height: 67px;
+    margin: 0 auto;
+}
+
+#botao1, #botao2 {
+    text-align: center;
+    width: 160px;
+    border-radius: 5px;
+    background-color: #aaa;
+}
+
+#botao1:hover, #botao2:hover {
+    background-color: #909090;
+}
+
+.erro {
+    color: red !important;
+}
+
+#d1, #d2, #d3, #d4, #d5, #d6, #d7, #d8, #d9, #d10, #d11, #d12, #d13, #d14, #d15, #d16, #d17 {
+    display: none;
+}
+
+#link1, #link2, #link3, #link4, #link5, #link6, #link7, #link8, #link9, #link10, #link11, #link12, #link13, #link14, #link15, #link16, #link17 {
+    cursor: pointer;
+    padding: 3px;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+#link1:hover, #link2:hover, #link3:hover, #link4:hover, #link5:hover, #link6:hover, #link7:hover, #link8:hover, #link9:hover, #link10:hover, #link11:hover, #link12:hover, #link13:hover, #link14:hover, #link15:hover, #link16:hover, #link17:hover {
+    padding: 3px;
+    border: 1px solid #eee;
+}
+
+.ativo {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.det {
+    margin-left: 50px;
+}
+
+.paracima {
+    display: block;
+    position: relative;
+    z-index: 900;
+    position: fixed;
+    top: 80%;
+    left: 85%;
+    display: none;
+    opacity: 0.6;
+}
+
+.paracima img {
+    width: 40px;
+    height: 60px;
+}
+
+.paracima:hover {
+    opacity: 1;
+}
+
+@media (max-width: 720px) {
+    /* Para dispositivos Mobile */
+    .calendario{
+	width: 100%;
+    }
+    #header{display: none;}
+    #menuredes2 {
+        display: none;
+    }
+    #iconec {
+        cursor: pointer;
+        top: 5px;
+        left: 5px;
+        z-index: 900;
+        display: block;
+        position: fixed;
+    }
+    #menucel {
+        z-index: 900;
+        display: none;
+        position: fixed;
+        top: 40px;
+    }
+    #menucel ul {
+        list-style: none;
+    }
+    #menucel a {
+        color: #000;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 8px;
+        margin-left: -20px;
+        padding: 5px 5px 5px 50px;
+        background-color: #aaa;
+        width: 200px;
+        border-radius: 3px;
+    }
+
+    figure.mapa, figure.mapa img, ul.contact, #formulario {
+        width: 99%;
+    }    
+    #botao1, #botao2{width: 90px;}
+}
