@@ -54,15 +54,15 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
-          <li><a class="nav-link scrollto" href="#about">Sobre</a></li>
-          <li><a class="nav-link scrollto" href="#tabs">Informações</a></li>
-          <li><a class="nav-link scrollto " href="#class">Disciplinas</a></li>
-		  <li><a class="nav-link scrollto" href="#team">Professores</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Fotos</a></li>
-          <li><a class="nav-link scrollto " href="#testimonials">Depoimentos</a></li>
-          <li><a class="nav-link scrollto " href="#faq">FAQ</a></li>          
-          <li><a class="nav-link scrollto" href="#contact">Contato</a></li>
+          <li><a class="nav-link scrollto active" href="/#hero">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="/#about">Sobre</a></li>
+          <li><a class="nav-link scrollto" href="/#tabs">Informações</a></li>
+          <li><a class="nav-link scrollto " href="/#class">Disciplinas</a></li>
+		  <li><a class="nav-link scrollto" href="/#team">Professores</a></li>
+          <li><a class="nav-link scrollto " href="/#portfolio">Fotos</a></li>
+          <li><a class="nav-link scrollto " href="/#testimonials">Depoimentos</a></li>
+          <li><a class="nav-link scrollto " href="/#faq">FAQ</a></li>          
+          <li><a class="nav-link scrollto" href="/#contact">Contato</a></li>
         </ul>
 
         <i class="bi bi-list mobile-nav-toggle"></i>

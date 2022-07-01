@@ -45,18 +45,7 @@
     right: 5px;
 }
 
-.tabs table {
-    border-spacing: 0;
-    width: 100%;
-}
-.tabs table th{
-    background-color: #ccc;
-}
-.tabs table th,
-.tabs table td {
-    border: 1px solid #555;
-    padding: 5px;
-}
+
 ul.arrow{
     margin-left: 20px;
 }
@@ -72,4 +61,8 @@ ul.arrow li::before {
     top: 1.1em;
     position: relative;
     text-align: left;
+}
+.post{
+    padding-top: 100px;
+    min-height: 500px;
 }
