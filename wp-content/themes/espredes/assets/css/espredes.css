@@ -16,10 +16,10 @@
     margin-top: 30px;
 }
 
-.tabs .bloco{
+.tabs .block{
     display: none;
 }
-.tabs .btn-sanfona{
+.tabs .btn-accordion{
     display: block;
     position: relative;
     width: 100%;
@@ -33,18 +33,17 @@
     margin-bottom: -10px;
 }
 
-.tabs .btn-sanfona:hover, .tabs .btn-sanfona-active{
+.tabs .btn-accordion:hover, .tabs .btn-accordion-active{
     background: #4C5C96;
     color: #fff;
 }
 
-.tabs .btn-sanfona i{
+.tabs .btn-accordion i{
     position: absolute;
     font-size: 20px;
     top: 8px;
     right: 5px;
 }
-
 
 ul.arrow{
     margin-left: 20px;

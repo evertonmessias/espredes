@@ -1,16 +1,21 @@
+function accordion(x){
+    if (!$('.block' + x).is(":visible")) {         
+        $('.block').slideUp(500);
+        $('.btn-accordion').removeClass('btn-accordion-active');
+        $('.btn-accordion' + x).addClass('btn-accordion-active');         
+        $('.block' + x).slideDown(500);              
+    }else { 
+        $('.btn-accordion' + x).removeClass('btn-accordion-active'); 
+        $('.block' + x).slideUp(500);             
+    } 
+}
+
 $(document).ready(function () {
     $('.venobox').venobox();
 
-    $('.btn-sanfona').click(()=>{
-        var x = $('.btn-sanfona').attr('data-sanfona');
-        if (!$('.bloco' + x).is(":visible")) {         
-            $('.bloco').slideUp(500);
-            $('.btn-sanfona').removeClass('btn-sanfona-active');
-            $('.btn-sanfona' + x).addClass('btn-sanfona-active');         
-            $('.bloco' + x).slideDown(500);              
-        }else { 
-            $('.btn-sanfona' + x).removeClass('btn-sanfona-active'); 
-            $('.bloco' + x).slideUp(500);             
-        }  
+    $('.btn-accordion100').click(()=>{
+        var acc = $('.btn-accordion100').attr('data-accordion');
+        accordion(acc);         
     })
+
 });

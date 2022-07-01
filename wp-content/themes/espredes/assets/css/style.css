@@ -706,11 +706,13 @@ section {
   margin-bottom: 20px;
   padding: 30px;
   border-radius: 6px;
-  background: #252525;
-  transition: 0.3s;
+  background: #fff;
+}
+.services .bloco{
+  display: none;
 }
 .services .icon-box:hover {
-  background: #2b2b2b;
+  background: #eee;
 }
 .services .icon-box i {
   float: left;
@@ -738,6 +740,19 @@ section {
   margin-left: 70px;
   line-height: 24px;
   font-size: 14px;
+  color:#2b2b2b;
+}
+.services .btn-accordion{
+  color: #4C5C96;
+  font-weight: 500;
+  cursor: pointer;
+}
+.services .block{
+  display: none;
+}
+.services i{
+  position: relative;
+  margin-top: 10px;
 }
 
 /*--------------------------------------------------------------
