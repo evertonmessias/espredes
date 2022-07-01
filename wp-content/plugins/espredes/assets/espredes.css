@@ -1,0 +1,113 @@
+#postdivrich.postarea, .page-title-action{
+    display: none;
+}
+.settings-espredes, .about-espredes{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 99%;
+    min-height: 500px;
+    border: 1px solid #888;
+    margin-top: 15px;
+    margin-left: -5px;
+    padding: 20px;
+}
+.settings-espredes label{
+    display: block !important;
+}
+.settings-espredes .wp-editor-wrap{
+    width: 100%;
+}
+
+.settings-espredes .title, .about-espredes .title{
+    color: #000;
+}
+.settings-espredes hr, .about-espredes hr{
+    background-color: #bbb !important;
+    border: 1px solid #bbb !important;
+}
+.settings-espredes table{
+    width: 65em;
+    border-spacing: 0;
+}
+
+.settings-espredes table img{
+    height: 100%;   
+}
+
+.settings-espredes input[type=number]{
+    width: 7em;
+    font-weight: 400;
+}
+.settings-espredes input[type=email],.settings-espredes input[type=text]{
+    width: 40em;
+    font-weight: 400;
+}
+.settings-espredes textarea{
+    width: 100%;
+    font-weight: 400;
+    margin-bottom: -3px;
+}
+
+.settings-espredes table td:nth-child(1),.settings-espredes table td:nth-child(3){
+    width: 4em;
+}
+
+.settings-espredes table td:nth-child(1) div{
+    text-align: center !important;
+    font-weight: 600;
+}
+.settings-espredes table td:nth-child(2){
+    width: 40em;   
+}
+.settings-espredes table td:nth-child(2) input{
+    width: 100%;
+}
+
+table.access {
+    width: 50%;
+    border-spacing: 0;
+}
+table.access th{
+    background-color: #ccc;
+}
+table.access th,
+table.access td {
+    border: 1px solid #555;
+    padding: 3px;
+}
+
+#post_descricao_id input[type=text]{
+    width: 100%;
+}
+
+.postbox-full{
+    display: block;
+    position: relative;    
+    width: 100%;
+}
+
+.postbox-full a{
+    background-color: #135E96;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.postbox-full a:hover{
+    background-color: #054474;
+}
+
+#informacoes_icone_id{
+    margin-top: 20px;
+}
+#informacoes_icone_id input[type=text]{
+    width: 95%;
+    margin-right: 10px;
+}
+#informacoes_icone_id i{
+    position: relative;
+    top: 8px;
+    font-size: 25px;
+}
