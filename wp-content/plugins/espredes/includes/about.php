@@ -3,7 +3,7 @@
     <p><b>ESPREDES</b> - é um plugin para gerenciamento do site ESPREDES.</p>
     <ul>
         <li><a href="https://github.com/evertonmessias/espredes" target="_blank">Projeto</a></li>
-        <li><a href="https://ic.unicamp.br/~everton" target="_blank">Site do Desenvolvedor</a></li>
+        <li><a href="https://portfolio.evertonm.com/" target="_blank">Site do Desenvolvedor</a></li>
     </ul>
     <br> 
     <hr>

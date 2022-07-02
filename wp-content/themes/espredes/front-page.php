@@ -103,7 +103,8 @@ if ($_SERVER['REMOTE_ADDR'] != "143.106.16.179" && $_SERVER['REMOTE_ADDR'] != "1
 						</a>
 					</li>
 				<?php $x++;
-				}	?>
+				}
+				wp_reset_postdata();	?>
 			</ul>
 
 			<div class="tab-content">
@@ -130,7 +131,8 @@ if ($_SERVER['REMOTE_ADDR'] != "143.106.16.179" && $_SERVER['REMOTE_ADDR'] != "1
 						</div>
 					</div>
 				<?php $x++;
-				}	?>
+				}
+				wp_reset_postdata();	?>
 			</div>
 
 		</div>
@@ -145,17 +147,34 @@ if ($_SERVER['REMOTE_ADDR'] != "143.106.16.179" && $_SERVER['REMOTE_ADDR'] != "1
 			</div>
 
 			<div class="row">
-				<div class="col-md-12">
-					<div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-						
-						<a class="btn-accordion btn-accordion1" title="Expandir" onclick="accordion(1)"><i class="ri-draft-line"></i><h4>Lorem Ipsum</h4></a>
-
-						<div class="block block1">
-							<p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+				<?php
+				$x = 1;
+				$args = array(
+					'post_type' => 'disciplina',
+					'posts_per_page' => 100
+				);
+				$loop = new WP_Query($args);
+				while ($loop->have_posts()) {
+					$loop->the_post();
+				?>
+					<div class="col-md-12 box">
+						<div class="icon-box" data-aos="fade-up" data-aos-delay="50">
+							<a class="btn-accordion btn-accordion<?php echo $x ?>" title="Expandir" onclick="accordion(<?php echo $x ?>)"><i class="ri-draft-line"></i>
+								<h4><?php echo get_the_title() ?></h4>
+							</a>
+							<div class="block block<?php echo $x ?>">
+								<h5><strong>Professor(es):</strong>&ensp;<?php echo get_post_meta($post->ID, 'disciplina_professor', true); ?></h5>
+								<h5><strong>Carga Horária:</strong>&ensp;<?php echo get_post_meta($post->ID, 'disciplina_carga', true); ?> h</h5>
+								<?php the_content() ?>
+							</div>
 						</div>
-
 					</div>
-				</div>
+
+				<?php $x++;
+				}
+				wp_reset_postdata();
+				?>
+
 			</div>
 
 		</div>

@@ -28,7 +28,7 @@ function create_custom_post_type_informacoes()
 		'rewrite' 				=> true,
 		'show_in_nav_menus'     => true,
 		'can_export'			=> true,
-		'menu_icon'             => 'dashicons-businessperson',
+		//'menu_icon'             => 'dashicons-businessperson',
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,

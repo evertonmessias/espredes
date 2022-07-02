@@ -111,3 +111,6 @@ table.access td {
     top: 8px;
     font-size: 25px;
 }
+#disciplina_professor_id input[type=text]{
+    width: 100%;
+}

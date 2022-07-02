@@ -48,3 +48,4 @@ include ABSPATH . '/wp-content/plugins/espredes/includes/settings.php';
 // TYPES ************************************************
 include ABSPATH . '/wp-content/plugins/espredes/includes/types/post.php';
 include ABSPATH . '/wp-content/plugins/espredes/includes/types/informacoes.php';
+include ABSPATH . '/wp-content/plugins/espredes/includes/types/disciplina.php';
