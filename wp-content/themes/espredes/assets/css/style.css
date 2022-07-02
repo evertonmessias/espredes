@@ -437,7 +437,7 @@ section {
   content: "";
   background: #4C5C96;
   position: absolute;
-  bottom: 30px;
+  bottom: 60px;
   top: 60px;
   left: 0;
   right: 0;
@@ -1102,6 +1102,11 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
+
+.team .team-slider {
+  overflow: hidden;
+}
+
 .team .member {
   margin-bottom: 20px;
   overflow: hidden;
@@ -1168,6 +1173,21 @@ section {
 .team .member:hover .social {
   opacity: 1;
   bottom: 15px;
+}
+
+.team .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+.team .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #4C5C96;
+}
+.team .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #4C5C96;
 }
 
 /*--------------------------------------------------------------
