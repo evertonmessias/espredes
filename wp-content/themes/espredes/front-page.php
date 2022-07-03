@@ -306,13 +306,14 @@ if ($_SERVER['REMOTE_ADDR'] != "143.106.16.179" && $_SERVER['REMOTE_ADDR'] != "1
 
 	<!-- ======= Contact Section ======= -->
 	<section id="contact" class="contact">
-		<div class="container" data-aos="fade-up">
-
+		<div class="container">
 			<div class="section-title">
-				<h2>Contato</h2>
+				<h2>CONTATO</h2>
 			</div>
+		</div>
+		<div class="container">
 
-			<div class="row" data-aos="fade-up" data-aos-delay="100">
+			<div class="row mt-5">
 
 				<div class="col-lg-6">
 
@@ -320,22 +321,22 @@ if ($_SERVER['REMOTE_ADDR'] != "143.106.16.179" && $_SERVER['REMOTE_ADDR'] != "1
 						<div class="col-md-12">
 							<div class="info-box">
 								<i class="bx bx-map"></i>
-								<h3>Our Address</h3>
-								<p>A108 Adam Street, New York, NY 535022</p>
+								<h3>Endereço</h3>
+								<p><?php echo get_option('portal_input_6'); ?></p>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="info-box mt-4">
 								<i class="bx bx-envelope"></i>
-								<h3>Email Us</h3>
-								<p>info@example.com<br>contact@example.com</p>
+								<h3>E-mail</h3>
+								<p><?php echo get_option('portal_input_10'); ?></p>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="info-box mt-4">
 								<i class="bx bx-phone-call"></i>
-								<h3>Call Us</h3>
-								<p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+								<h3>Telefone</h3>
+								<p><?php echo get_option('portal_input_9'); ?></p>
 							</div>
 						</div>
 					</div>
@@ -343,32 +344,16 @@ if ($_SERVER['REMOTE_ADDR'] != "143.106.16.179" && $_SERVER['REMOTE_ADDR'] != "1
 				</div>
 
 				<div class="col-lg-6">
-					<form action="forms/contact.php" method="post" role="form" class="php-email-form">
-						<div class="row">
-							<div class="col form-group">
-								<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-							</div>
-							<div class="col form-group">
-								<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-							</div>
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-						</div>
-						<div class="form-group">
-							<textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-						</div>
-						<div class="my-3">
-							<div class="loading">Loading</div>
-							<div class="error-message"></div>
-							<div class="sent-message">Your message has been sent. Thank you!</div>
-						</div>
-						<div class="text-center"><button type="submit">Send Message</button></div>
-					</form>
+					<div class="php-email-form">
+						<?php echo do_shortcode('[contact-form-7 id="130" title="Contato"]'); ?>
+					</div>
 				</div>
 
 			</div>
 
+		</div>
+		<div class="google-maps">
+			<iframe style="border:0; width: 100%; height: 350px;" src="<?php echo get_option('portal_input_7'); ?>" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</section><!-- End Contact Section -->
 

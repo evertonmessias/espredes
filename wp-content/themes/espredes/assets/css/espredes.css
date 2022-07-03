@@ -68,6 +68,20 @@ ul.arrow li::before {
     position: relative;
     text-align: left;
 }
+
+.contact .wpcf7-form-control-wrap{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.contact .wpcf7-form-control-wrap textarea{
+    height: 150px;
+}
+
+.contact .google-maps{
+    margin-top: 50px;
+    margin-bottom: -70px;
+}
+
 .post{
     padding-top: 100px;
     min-height: 500px;
@@ -87,3 +101,4 @@ ul.arrow li::before {
     margin: 0 auto;
     max-height: 400px;
 }
+

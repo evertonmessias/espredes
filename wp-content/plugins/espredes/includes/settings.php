@@ -71,7 +71,19 @@ function portal_page_html()
 				
 			</label>
 
-			
+			<br><br><!-- Endereço *************************************** -->
+			<hr>
+			<label>
+				<h3 class="title">Endereço: </h3><input type="text" id="portal_input_6" name="portal_input_6" value="<?php echo get_option('portal_input_6'); ?>" />
+			</label>
+			<br>
+
+			<br><br><!-- Maps *************************************** -->
+			<hr>
+			<label>
+				<h3 class="title">Google Maps: </h3><input type="text" id="portal_input_7" name="portal_input_7" value="<?php echo get_option('portal_input_7'); ?>" />
+			</label>
+			<br><span>(https://www.google.com/maps/embed?......)</span>			
 
 			<br><br><!-- Fone *************************************** -->
 			<hr>
