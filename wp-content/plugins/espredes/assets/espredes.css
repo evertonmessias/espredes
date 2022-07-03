@@ -120,3 +120,6 @@ table.access td {
 #professor_local_id input[type=text]{
     width: 100%;
 }
+#post_descricao_id{
+    display: none;
+}

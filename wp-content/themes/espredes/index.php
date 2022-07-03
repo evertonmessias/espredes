@@ -24,6 +24,17 @@
 
     <div class="container">
 
+    <div class="portfolio-details-container">
+        <?php if (has_post_thumbnail()) { ?>
+          <div class="owl-carousel portfolio-details-carousel">
+            <a href="<?php the_post_thumbnail_url('full'); ?>" target="_blank">
+              <img src="<?php the_post_thumbnail_url('full'); ?>" class="img-fluid" title="<?php the_title() ?>">
+            </a>
+          </div>
+          <br><br>
+        <?php } ?>
+      </div>
+
       <div class="portfolio-description text-justify">
         <?php if(url_active()[1] == "disciplina"){ ?>
           <h5><strong>Professor(es):</strong>&ensp;<?php echo get_post_meta($post->ID, 'disciplina_professor', true); ?></h5>

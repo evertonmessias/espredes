@@ -59,7 +59,7 @@ add_action('admin_menu', 'wpdocs_remove_menus');
 function wd_admin_menu_rename()
 {
 	global $menu;
-	$menu[5][0] = 'Fotos';
+	$menu[5][0] = 'Galeria';
 }
 add_action('admin_menu', 'wd_admin_menu_rename');
 
@@ -119,7 +119,7 @@ add_action('list_access','list_access');
 //************* Login_redirect
 function admin_default_page()
 {
-  return '/wp-admin';
+  return '/wp-admin/admin.php?page=espredes';
 }
 add_filter('login_redirect', 'admin_default_page');
 

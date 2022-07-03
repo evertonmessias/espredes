@@ -59,7 +59,7 @@
           <li><a class="nav-link scrollto" href="/#tabs">Informações</a></li>
           <li><a class="nav-link scrollto " href="/#class">Disciplinas</a></li>
 		  <li><a class="nav-link scrollto" href="/#team">Professores</a></li>
-          <li><a class="nav-link scrollto " href="/#portfolio">Fotos</a></li>                   
+          <li><a class="nav-link scrollto " href="/#gallery">Galeria</a></li>                   
           <li><a class="nav-link scrollto" href="/#contact">Contato</a></li>
         </ul>
 

@@ -236,155 +236,71 @@ if ($_SERVER['REMOTE_ADDR'] != "143.106.16.179" && $_SERVER['REMOTE_ADDR'] != "1
 		</div>
 	</section><!-- End Team Section -->
 
-	<!-- ======= Portfolio Section ======= -->
-	<section id="portfolio" class="portfolio section-bg">
+	<!-- ======= Portfolio ======= -->
+	<section id="gallery" class="portfolio section-bg">
 		<div class="container" data-aos="fade-up">
+			<?php
+			$argsCat = array(
+				'orderby'       => 'id',
+				'order'         => 'DESC'
+			);
+			$categories = get_terms('category', $argsCat);
+			foreach ($categories as $category) {
+				$cat_portfolio[] = $category->slug;
+			}
+			?>
 
 			<div class="section-title">
-				<h2>Fotos</h2>
+				<h2>Galeria</h2>
 			</div>
 
 			<div class="row" data-aos="fade-up" data-aos-delay="100">
 				<div class="col-lg-12 d-flex justify-content-center">
-					<ul id="portfolio-flters">
-						<li data-filter="*" class="filter-active">All</li>
-						<li data-filter=".filter-app">App</li>
-						<li data-filter=".filter-card">Card</li>
-						<li data-filter=".filter-web">Web</li>
+					<ul id="portfolio-flters" class="portfolio-ul">
+						<li data-filter="*" class="filter-active">Todos</li>
+						<?php
+						foreach ($categories as $category) {
+							if ($category->slug != "sem-categoria") { ?>
+								<li data-filter=".filter-<?php echo $category->slug; ?>"><?php echo $category->name; ?></li>
+						<?php }
+						} ?>
 					</ul>
 				</div>
 			</div>
 
 			<div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-				<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-					<div class="portfolio-wrap">
-						<img src="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>App 1</h4>
-							<p>App</p>
-							<div class="portfolio-links">
-								<a href="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+				<?php foreach ($categories as $category) {
+					$args = array(
+						'category_name' => $category->slug,
+						'post_type' => 'post',
+						'orderby' => 'id',
+						'order' => 'DESC',
+						'posts_per_page' => 10
+					);
+					$loop = new WP_Query($args);
+					while ($loop->have_posts()) {
+						$loop->the_post();
+						if (has_post_thumbnail()) {
+							$imagem = get_the_post_thumbnail_url(get_the_ID(), 'full');
+						} else {
+							$imagem = SITEPATH . "assets/img/semimagem.png";
+						}
+				?>
+						<div class="col-lg-4 portfolio-item filter-<?php echo $category->slug; ?>">
+							<div class="portfolio-wrap">
+								<img src="<?php echo $imagem; ?>" class="img-fluid" title="<?php echo get_the_title() ?>">
+								<div class="portfolio-info">
+									<div class="portfolio-links">
+										<a href="<?php echo $imagem; ?>" data-gallery="portfolioGallery" class="portfolio-lightbox" title="<?php echo get_the_title() ?>"><i class="bx bx-plus"></i></a>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-					<div class="portfolio-wrap">
-						<img src="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>Web 3</h4>
-							<p>Web</p>
-							<div class="portfolio-links">
-								<a href="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-					<div class="portfolio-wrap">
-						<img src="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>App 2</h4>
-							<p>App</p>
-							<div class="portfolio-links">
-								<a href="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-card">
-					<div class="portfolio-wrap">
-						<img src="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>Card 2</h4>
-							<p>Card</p>
-							<div class="portfolio-links">
-								<a href="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-					<div class="portfolio-wrap">
-						<img src="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>Web 2</h4>
-							<p>Web</p>
-							<div class="portfolio-links">
-								<a href="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-					<div class="portfolio-wrap">
-						<img src="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>App 3</h4>
-							<p>App</p>
-							<div class="portfolio-links">
-								<a href="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-card">
-					<div class="portfolio-wrap">
-						<img src="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>Card 1</h4>
-							<p>Card</p>
-							<div class="portfolio-links">
-								<a href="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-card">
-					<div class="portfolio-wrap">
-						<img src="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>Card 3</h4>
-							<p>Card</p>
-							<div class="portfolio-links">
-								<a href="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-					<div class="portfolio-wrap">
-						<img src="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<h4>Web 3</h4>
-							<p>Web</p>
-							<div class="portfolio-links">
-								<a href="<?php echo SITEPATH; ?>assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-								<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-
+				<?php }
+					wp_reset_postdata();
+				} ?>
 			</div>
-
 		</div>
 	</section><!-- End Portfolio Section -->
 

@@ -1,6 +1,6 @@
 <div class="about-espredes">
-    <h1 class="title">Sobre</h1>
-    <p><b>ESPREDES</b> - é um plugin para gerenciamento do site ESPREDES.</p>
+    <h1 class="title">ESPREDES</h1>
+    <p>É um plugin para gerenciamento do site do curso de <b>Especialização em Redes de Computadores, IC - Unicamp</b>.</p>
     <ul>
         <li><a href="https://github.com/evertonmessias/espredes" target="_blank">Projeto</a></li>
         <li><a href="https://portfolio.evertonm.com/" target="_blank">Site do Desenvolvedor</a></li>

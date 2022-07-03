@@ -72,3 +72,18 @@ ul.arrow li::before {
     padding-top: 100px;
     min-height: 500px;
 }
+.post .portfolio-item{
+    margin-bottom: 30px;
+}
+.post .portfolio-item img{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    height: 300px;
+}
+.post .portfolio-details-container img{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-height: 400px;
+}

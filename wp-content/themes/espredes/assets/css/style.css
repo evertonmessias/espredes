@@ -771,6 +771,7 @@ section {
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
   border-radius: 3px;
+  border: 1px solid transparent;
 }
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
   color: #fff;
@@ -816,6 +817,25 @@ section {
   justify-content: flex-end;
   align-items: flex-start;
   padding: 20px;
+}
+.portfolio .portfolio-wrap .portfolio-info .portfolio-links a{
+  position: absolute;
+  width: 55px;
+  left: 45%;
+  top:45%;
+  background-color: #4C5C96;
+  color: #fff;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+.portfolio .portfolio-wrap .portfolio-info .portfolio-links a:hover{
+  background-color: #fff;
+  color: #4C5C96;
+  border: 5px solid #4C5C96;
+}
+.portfolio .portfolio-wrap .portfolio-info .portfolio-links a i{
+  margin-top: 8px;
+  font-size: 30px;
 }
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
