@@ -31,6 +31,7 @@
     text-align: center;
     cursor: pointer;
     margin-bottom: -10px;
+    border-radius: 3px;
 }
 
 .tabs .btn-accordion:hover, .tabs .btn-accordion-active{
@@ -43,6 +44,12 @@
     font-size: 20px;
     top: 8px;
     right: 5px;
+}
+
+.services .btn-accordion .bx{
+    position: relative;
+    font-size: 20px;
+    left: 95%;
 }
 
 ul.arrow{

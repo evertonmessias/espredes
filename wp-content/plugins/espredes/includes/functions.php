@@ -67,7 +67,7 @@ add_action('admin_menu', 'wd_admin_menu_rename');
 // ***************** Add in Menu
 function menu_espredes()
 {
-	add_menu_page('ESPREDES', 'ESPREDES', 'edit_posts', 'espredes', 'function_about', 'dashicons-screenoptions', 1);
+	add_menu_page('ESPREDES', 'ESPREDES', 'edit_posts', 'espredes', 'function_about', 'dashicons-networking', 1);
 }
 add_action('admin_menu', 'menu_espredes');
 
@@ -88,6 +88,7 @@ add_action('admin_enqueue_scripts', 'load_media_files');
 //************* Add thumbnails
 add_theme_support('post-thumbnails', array('post'));
 add_theme_support('post-thumbnails', array('informacoes'));
+add_theme_support('post-thumbnails', array('professor'));
 
 
 //************* Data Base

@@ -21,14 +21,14 @@ function create_custom_post_type_informacoes()
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
-		'show_in_menu'          => false,
+		'show_in_menu'          => true,
 		'query_var' 			=> true,
-		'menu_position'         => 1,
+		'menu_position'         => 2,
 		'show_in_admin_bar'     => true,
 		'rewrite' 				=> true,
 		'show_in_nav_menus'     => true,
 		'can_export'			=> true,
-		//'menu_icon'             => 'dashicons-businessperson',
+		'menu_icon'             => 'dashicons-info',
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
@@ -43,7 +43,7 @@ add_action('init', 'create_custom_post_type_informacoes');
 //Add in submenu
 function type_informacoes()
 {
-	add_submenu_page('espredes', 'Informacões', 'Informacões', 'edit_posts', 'edit.php?post_type=informacoes');
+	//add_submenu_page('espredes', 'Informacões', 'Informacões', 'edit_posts', 'edit.php?post_type=informacoes');
 }
 add_action('admin_menu', 'type_informacoes');
 

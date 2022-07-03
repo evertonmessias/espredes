@@ -99,9 +99,13 @@ table.access td {
     background-color: #054474;
 }
 
-#informacoes_icone_id{
+#informacoes_icone_id,
+#disciplina_professor_id,
+#professor_url_id,
+#professor_local_id{
     margin-top: 20px;
 }
+
 #informacoes_icone_id input[type=text]{
     width: 95%;
     margin-right: 10px;
@@ -111,6 +115,8 @@ table.access td {
     top: 8px;
     font-size: 25px;
 }
-#disciplina_professor_id input[type=text]{
+#disciplina_professor_id input[type=text],
+#professor_url_id input[type=text],
+#professor_local_id input[type=text]{
     width: 100%;
 }

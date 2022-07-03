@@ -161,7 +161,7 @@ if ($_SERVER['REMOTE_ADDR'] != "143.106.16.179" && $_SERVER['REMOTE_ADDR'] != "1
 						<div class="icon-box">
 							<a class="btn-accordion btn-accordion2 btn-accordion2<?php echo $x ?>" title="Expandir" data-section="2" data-accordion="<?php echo $x ?>">
 								<i class="ri-draft-line"></i>
-								<h4><?php echo get_the_title() ?></h4>
+								<h4><?php echo get_the_title() ?><i class="bx bx-caret-down"></i></h4>
 							</a>
 							<div class="block block2 block2<?php echo $x ?>">
 								<h5><strong>Professor(es):</strong>&ensp;<?php echo get_post_meta($post->ID, 'disciplina_professor', true); ?></h5>
@@ -188,81 +188,47 @@ if ($_SERVER['REMOTE_ADDR'] != "143.106.16.179" && $_SERVER['REMOTE_ADDR'] != "1
 			<div class="section-title">
 				<h2>Professores</h2>
 			</div>
-
+			<br>
 			<div class="team-slider swiper">
 				<div class="swiper-wrapper align-items-center">
 
-					<div class="swiper-slide">
-						<div class="member" data-aos="fade-up" data-aos-delay="100">
-							<div class="member-img">
-								<img src="<?php echo SITEPATH; ?>assets/img/team/team-1.jpg" class="img-fluid" alt="">
-								<div class="social">
-									<a href=""><i class="bi bi-twitter"></i></a>
-									<a href=""><i class="bi bi-facebook"></i></a>
-									<a href=""><i class="bi bi-instagram"></i></a>
-									<a href=""><i class="bi bi-linkedin"></i></a>
+					<?php
+					$args = array(
+						'post_type' => 'professor',
+						'posts_per_page' => 100,
+						'orderby' => 'name',
+						'order' => 'ASC'
+					);
+					$loop = new WP_Query($args);
+					while ($loop->have_posts()) {
+						$loop->the_post();
+						if (has_post_thumbnail()) {
+							$imagem = get_the_post_thumbnail_url($post->ID, 'full');
+						} else {
+							$imagem = SITEPATH . "assets/img/semimagem.png";
+						}
+					?>
+						<div class="swiper-slide">
+							<div class="member">
+								<div class="member-img">
+									<img src="<?php echo $imagem; ?>" class="img-fluid" title="<?php echo get_the_title() ?>">
+									<?php if (get_post_meta($post->ID, 'professor_url', true) != "") { ?>
+										<div class="social">
+											<a target="_blank" href="<?php echo get_post_meta($post->ID, 'professor_url', true); ?>"><i class="ri-external-link-fill"></i></a>
+										</div>
+									<?php } ?>
+								</div>
+								<div class="member-info">
+									<h4><?php echo get_the_title() ?></h4>
+									<span><?php echo get_post_meta($post->ID, 'professor_local', true); ?></span>
 								</div>
 							</div>
-							<div class="member-info">
-								<h4>Walter White</h4>
-								<span>Chief Executive Officer</span>
-							</div>
 						</div>
-					</div>
 
-					<div class="swiper-slide">
-						<div class="member" data-aos="fade-up" data-aos-delay="200">
-							<div class="member-img">
-								<img src="<?php echo SITEPATH; ?>assets/img/team/team-2.jpg" class="img-fluid" alt="">
-								<div class="social">
-									<a href=""><i class="bi bi-twitter"></i></a>
-									<a href=""><i class="bi bi-facebook"></i></a>
-									<a href=""><i class="bi bi-instagram"></i></a>
-									<a href=""><i class="bi bi-linkedin"></i></a>
-								</div>
-							</div>
-							<div class="member-info">
-								<h4>Sarah Jhonson</h4>
-								<span>Product Manager</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="swiper-slide">
-						<div class="member" data-aos="fade-up" data-aos-delay="300">
-							<div class="member-img">
-								<img src="<?php echo SITEPATH; ?>assets/img/team/team-3.jpg" class="img-fluid" alt="">
-								<div class="social">
-									<a href=""><i class="bi bi-twitter"></i></a>
-									<a href=""><i class="bi bi-facebook"></i></a>
-									<a href=""><i class="bi bi-instagram"></i></a>
-									<a href=""><i class="bi bi-linkedin"></i></a>
-								</div>
-							</div>
-							<div class="member-info">
-								<h4>William Anderson</h4>
-								<span>CTO</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="swiper-slide">
-						<div class="member" data-aos="fade-up" data-aos-delay="400">
-							<div class="member-img">
-								<img src="<?php echo SITEPATH; ?>assets/img/team/team-4.jpg" class="img-fluid" alt="">
-								<div class="social">
-									<a href=""><i class="bi bi-twitter"></i></a>
-									<a href=""><i class="bi bi-facebook"></i></a>
-									<a href=""><i class="bi bi-instagram"></i></a>
-									<a href=""><i class="bi bi-linkedin"></i></a>
-								</div>
-							</div>
-							<div class="member-info">
-								<h4>Amanda Jepson</h4>
-								<span>Accountant</span>
-							</div>
-						</div>
-					</div>
+					<?php
+					}
+					wp_reset_postdata();
+					?>
 
 				</div>
 				<div class="swiper-pagination"></div>
