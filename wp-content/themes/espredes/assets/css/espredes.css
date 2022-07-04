@@ -102,3 +102,6 @@ ul.arrow li::before {
     max-height: 400px;
 }
 
+#footer .credits{
+    font-size: 10px;
+}

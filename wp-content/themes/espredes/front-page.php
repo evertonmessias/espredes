@@ -329,7 +329,7 @@ if ($_SERVER['REMOTE_ADDR'] != "143.106.16.179" && $_SERVER['REMOTE_ADDR'] != "1
 							<div class="info-box mt-4">
 								<i class="bx bx-envelope"></i>
 								<h3>E-mail</h3>
-								<p><?php echo get_option('portal_input_10'); ?></p>
+								<p><a href="mailto:<?php echo get_option('portal_input_10'); ?>"><?php echo get_option('portal_input_10'); ?></a></p>
 							</div>
 						</div>
 						<div class="col-md-6">

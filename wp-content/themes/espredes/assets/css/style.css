@@ -1655,34 +1655,38 @@ section {
 }
 #footer .footer-newsletter form {
   margin-top: 30px;
-  background: #fff;
   padding: 5px 10px;
   position: relative;
   border-radius: 4px;
   text-align: left;
+  height: 40px;
 }
 #footer .footer-newsletter form input[type=email] {
   border: 0;
   padding: 4px 8px;
-  width: calc(100% - 100px);
+  width: 75%;
+  height: 40px;
 }
 #footer .footer-newsletter form input[type=submit] {
-  position: absolute;
-  top: 0;
+  position: relative;
+  top: 2px;
   right: -1px;
   bottom: 0;
   border: 0;
   background: none;
   font-size: 16px;
-  padding: 0 20px;
+  padding: 0 20px;  
+  transition: 0.3s;
+  border-radius: 3px;  
+  height: 40px;
   background: #4C5C96;
   color: #fff;
-  transition: 0.3s;
-  border-radius: 0 4px 4px 0;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
 }
 #footer .footer-newsletter form input[type=submit]:hover {
-  background: #3f58b3;
+  background: #fff ;
+  color: #4C5C96;
+  border: 1px solid #4C5C96;  
 }
 #footer .credits {
   padding-top: 5px;

@@ -98,8 +98,21 @@ function portal_page_html()
 			<label>
 				<h3 class="title">E-Mail: </h3><input type="email" id="portal_input_10" name="portal_input_10" value="<?php echo get_option('portal_input_10'); ?>" />
 			</label>
-			<br><span>(only one)</span>			
-					
+			<br><span>(only one)</span>	
+			
+			<br><br><!-- Facebook *************************************** -->
+			<hr>
+			<label>
+				<h3 class="title">Facebook: </h3><input type="text" id="portal_input_11" name="portal_input_11" value="<?php echo get_option('portal_input_11'); ?>" />
+			</label>
+			
+
+			<br><br><!-- Instagram *************************************** -->
+			<hr>
+			<label>
+				<h3 class="title">Instagram: </h3><input type="text" id="portal_input_12" name="portal_input_12" value="<?php echo get_option('portal_input_12'); ?>" />
+			</label>
+								
 			
 			<br><br><!-- *************************************** -->
 			<hr>	
@@ -199,3 +212,19 @@ function portal_settings10()
 	register_setting('portal_option_grupo', 'portal_input_10');
 }
 add_action('admin_init', 'portal_settings10');
+
+
+function portal_settings11()
+{
+	add_option('portal_input_11');
+	register_setting('portal_option_grupo', 'portal_input_11');
+}
+add_action('admin_init', 'portal_settings11');
+
+
+function portal_settings12()
+{
+	add_option('portal_input_12');
+	register_setting('portal_option_grupo', 'portal_input_12');
+}
+add_action('admin_init', 'portal_settings12');
