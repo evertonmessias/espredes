@@ -386,6 +386,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
     line-height: 24px;
   }
+  #hero hr{
+    width: 50%;
+  }
 }
 @media (max-height: 500px) {
   #hero {
@@ -586,6 +589,11 @@ section {
   box-shadow: 0px 2px 35px rgba(0, 0, 0, 0.06);
   border-radius: 4px;
   background: #eee;
+}
+@media (max-width: 768px) {
+  .counts .count-box {
+    margin-bottom: 50px;
+  }
 }
 .counts .count-box i {
   position: absolute;
@@ -1660,6 +1668,11 @@ section {
   border-radius: 4px;
   text-align: left;
   height: 40px;
+}
+@media (max-width: 768px) {
+  #footer .footer-newsletter {
+    margin-bottom: 50px;  
+  }
 }
 #footer .footer-newsletter form input[type=email] {
   border: 0;
